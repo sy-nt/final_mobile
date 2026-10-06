@@ -1,0 +1,273 @@
+import { UserRole } from "@domain/entities";
+
+export const SEED_PASSWORD = "InkDeck123";
+
+export const SEED_USERS = [
+    {
+        email: "minh.admin@inkdeck.seed",
+        firstName: "Minh",
+        lastName: "Tran",
+        role: UserRole.ADMIN,
+    },
+    {
+        email: "ada.nguyen@inkdeck.seed",
+        firstName: "Ada",
+        lastName: "Nguyen",
+        role: UserRole.USER,
+    },
+    {
+        email: "linh.pham@inkdeck.seed",
+        firstName: "Linh",
+        lastName: "Pham",
+        role: UserRole.USER,
+    },
+    {
+        email: "huy.le@inkdeck.seed",
+        firstName: "Huy",
+        lastName: "Le",
+        role: UserRole.USER,
+    },
+    {
+        email: "mai.vo@inkdeck.seed",
+        firstName: "Mai",
+        lastName: "Vo",
+        role: UserRole.USER,
+    },
+    {
+        email: "khoa.bui@inkdeck.seed",
+        firstName: "Khoa",
+        lastName: "Bui",
+        role: UserRole.USER,
+    },
+    {
+        email: "an.do@inkdeck.seed",
+        firstName: "An",
+        lastName: "Do",
+        role: UserRole.USER,
+    },
+    {
+        email: "trang.ho@inkdeck.seed",
+        firstName: "Trang",
+        lastName: "Ho",
+        role: UserRole.USER,
+    },
+    {
+        email: "duc.phan@inkdeck.seed",
+        firstName: "Duc",
+        lastName: "Phan",
+        role: UserRole.USER,
+    },
+    {
+        email: "ha.dang@inkdeck.seed",
+        firstName: "Ha",
+        lastName: "Dang",
+        role: UserRole.USER,
+    },
+];
+
+export const SEED_TAGS = [
+    "animals",
+    "daily",
+    "food",
+    "greetings",
+    "nature",
+    "school",
+    "travel",
+    "verbs",
+];
+
+export const SEED_DECKS: {
+    cards: { example?: string; wordEn: string; wordVi: string }[];
+    description: string;
+    ownerEmail: string;
+    public: boolean;
+    tags: string[];
+    title: string;
+}[] = [
+    {
+        cards: [
+            { example: "Hello, my name is Ada.", wordEn: "hello", wordVi: "xin chào" },
+            { example: "Good morning, class.", wordEn: "good morning", wordVi: "chào buổi sáng" },
+            { wordEn: "good night", wordVi: "chúc ngủ ngon" },
+            { wordEn: "thank you", wordVi: "cảm ơn" },
+            { wordEn: "please", wordVi: "làm ơn" },
+            { wordEn: "sorry", wordVi: "xin lỗi" },
+            { wordEn: "goodbye", wordVi: "tạm biệt" },
+            { wordEn: "see you", wordVi: "hẹn gặp lại" },
+        ],
+        description: "First words you say at the desk.",
+        ownerEmail: "ada.nguyen@inkdeck.seed",
+        public: true,
+        tags: ["greetings", "daily"],
+        title: "Everyday Greetings",
+    },
+    {
+        cards: [
+            { wordEn: "bowl", wordVi: "tô" },
+            { wordEn: "chopsticks", wordVi: "đũa" },
+            { wordEn: "knife", wordVi: "dao" },
+            { wordEn: "spoon", wordVi: "thìa" },
+            { wordEn: "plate", wordVi: "đĩa" },
+            { wordEn: "stove", wordVi: "bếp" },
+            { wordEn: "rice", wordVi: "cơm" },
+            { wordEn: "soup", wordVi: "canh" },
+        ],
+        description: "Words from a small kitchen.",
+        ownerEmail: "ada.nguyen@inkdeck.seed",
+        public: true,
+        tags: ["food", "daily"],
+        title: "Kitchen Words",
+    },
+    {
+        cards: [
+            { wordEn: "hope", wordVi: "hy vọng" },
+            { wordEn: "quiet", wordVi: "yên lặng" },
+            { wordEn: "ink", wordVi: "mực" },
+        ],
+        description: "A private list, not in the gallery.",
+        ownerEmail: "ada.nguyen@inkdeck.seed",
+        public: false,
+        tags: ["daily"],
+        title: "Journal scraps",
+    },
+    {
+        cards: [
+            { wordEn: "passport", wordVi: "hộ chiếu" },
+            { wordEn: "boarding pass", wordVi: "thẻ lên máy bay" },
+            { wordEn: "luggage", wordVi: "hành lý" },
+            { wordEn: "gate", wordVi: "cửa ra máy bay" },
+            { wordEn: "delay", wordVi: "trễ" },
+            { wordEn: "ticket", wordVi: "vé" },
+            { wordEn: "customs", wordVi: "hải quan" },
+            { wordEn: "arrival", wordVi: "đến" },
+        ],
+        description: "English you need before the flight.",
+        ownerEmail: "linh.pham@inkdeck.seed",
+        public: true,
+        tags: ["travel"],
+        title: "Airport English",
+    },
+    {
+        cards: [
+            { wordEn: "mother", wordVi: "mẹ" },
+            { wordEn: "father", wordVi: "bố" },
+            { wordEn: "sister", wordVi: "chị/em gái" },
+            { wordEn: "brother", wordVi: "anh/em trai" },
+        ],
+        description: "Kept on Linh's own desk.",
+        ownerEmail: "linh.pham@inkdeck.seed",
+        public: false,
+        tags: ["daily"],
+        title: "Family Members",
+    },
+    {
+        cards: [
+            { wordEn: "cat", wordVi: "mèo" },
+            { wordEn: "dog", wordVi: "chó" },
+            { wordEn: "chicken", wordVi: "gà" },
+            { wordEn: "duck", wordVi: "vịt" },
+            { wordEn: "cow", wordVi: "bò" },
+            { wordEn: "pig", wordVi: "heo" },
+            { wordEn: "horse", wordVi: "ngựa" },
+            { wordEn: "goat", wordVi: "dê" },
+        ],
+        description: "Simple animals for a first quiz.",
+        ownerEmail: "huy.le@inkdeck.seed",
+        public: true,
+        tags: ["animals"],
+        title: "Farm Animals",
+    },
+    {
+        cards: [
+            { wordEn: "run", wordVi: "chạy" },
+            { wordEn: "walk", wordVi: "đi bộ" },
+            { wordEn: "eat", wordVi: "ăn" },
+            { wordEn: "drink", wordVi: "uống" },
+            { wordEn: "read", wordVi: "đọc" },
+            { wordEn: "write", wordVi: "viết" },
+            { wordEn: "sleep", wordVi: "ngủ" },
+            { wordEn: "study", wordVi: "học" },
+        ],
+        description: "Common verbs, mixed directions.",
+        ownerEmail: "mai.vo@inkdeck.seed",
+        public: true,
+        tags: ["verbs", "school"],
+        title: "Action Verbs",
+    },
+    {
+        cards: [
+            { wordEn: "pencil", wordVi: "bút chì" },
+            { wordEn: "eraser", wordVi: "cục tẩy" },
+            { wordEn: "notebook", wordVi: "vở" },
+            { wordEn: "backpack", wordVi: "ba lô" },
+            { wordEn: "ruler", wordVi: "thước kẻ" },
+            { wordEn: "glue", wordVi: "keo" },
+        ],
+        description: "Invite-only deck for a classmate.",
+        ownerEmail: "khoa.bui@inkdeck.seed",
+        public: false,
+        tags: ["school"],
+        title: "School Supplies",
+    },
+    {
+        cards: [
+            { wordEn: "pho", wordVi: "phở" },
+            { wordEn: "banh mi", wordVi: "bánh mì" },
+            { wordEn: "spring roll", wordVi: "gỏi cuốn" },
+            { wordEn: "sticky rice", wordVi: "xôi" },
+            { wordEn: "iced coffee", wordVi: "cà phê sữa đá" },
+            { wordEn: "papaya salad", wordVi: "gỏi đu đủ" },
+        ],
+        description: "Words from a plastic stool on the sidewalk.",
+        ownerEmail: "an.do@inkdeck.seed",
+        public: true,
+        tags: ["food"],
+        title: "Street Food",
+    },
+    {
+        cards: [
+            { wordEn: "sun", wordVi: "mặt trời" },
+            { wordEn: "rain", wordVi: "mưa" },
+            { wordEn: "cloud", wordVi: "mây" },
+            { wordEn: "wind", wordVi: "gió" },
+            { wordEn: "storm", wordVi: "bão" },
+            { wordEn: "hot", wordVi: "nóng" },
+            { wordEn: "cold", wordVi: "lạnh" },
+        ],
+        description: "Talk about the sky before you go out.",
+        ownerEmail: "trang.ho@inkdeck.seed",
+        public: true,
+        tags: ["nature", "daily"],
+        title: "Weather",
+    },
+    {
+        cards: [
+            { wordEn: "red", wordVi: "đỏ" },
+            { wordEn: "blue", wordVi: "xanh dương" },
+            { wordEn: "circle", wordVi: "hình tròn" },
+            { wordEn: "square", wordVi: "hình vuông" },
+        ],
+        description: "Private practice, not listed.",
+        ownerEmail: "duc.phan@inkdeck.seed",
+        public: false,
+        tags: ["school"],
+        title: "Colors & Shapes",
+    },
+    {
+        cards: [
+            { wordEn: "today", wordVi: "hôm nay" },
+            { wordEn: "tomorrow", wordVi: "ngày mai" },
+            { wordEn: "yesterday", wordVi: "hôm qua" },
+            { wordEn: "hour", wordVi: "giờ" },
+            { wordEn: "minute", wordVi: "phút" },
+            { wordEn: "week", wordVi: "tuần" },
+            { wordEn: "month", wordVi: "tháng" },
+            { wordEn: "year", wordVi: "năm" },
+        ],
+        description: "When something happens.",
+        ownerEmail: "ha.dang@inkdeck.seed",
+        public: true,
+        tags: ["daily"],
+        title: "Time & Dates",
+    },
+];

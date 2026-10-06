@@ -1,0 +1,25 @@
+name: input_info
+description: InkDeck — bilingual English–Vietnamese flashcards.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_secure_storage: ^11.2.0
+  go_router: ^18.0.2
+  google_fonts: ^9.0.0
+  http: ^1.6.0
+  provider: ^6.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
